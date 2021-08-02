@@ -1,0 +1,8 @@
+metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+cloudsmith.vulnerability_at_least_high_count,gauge,,count,,vulnerabilities,0,Cloudsmith,vulnerability_at_least_high_count
+cloudsmith.total_vulnerabilities,gauge,,count,,"total vulnerabilities in an Org",0,Cloudsmith,total_vulnerabilities
+cloudsmith.package_count,gauge,,count,,"total number of packages in an Org",0,Cloudsmith,package_count
+cloudsmith.storage_used,gauge,,percent,,"percentage storage used",0,Cloudsmith,storage_used
+cloudsmith.bandwidth_used,gauge,,percent,,"percentage bandwidth used",0,Cloudsmith,bandwidth_used
+
+
