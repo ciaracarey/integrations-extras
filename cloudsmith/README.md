@@ -3,7 +3,7 @@
 ## Overview
 
 This check monitors [Cloudsmith][1] through the Datadog Agent.
-- Monitor an organization in your Cloudsmith account for packages with high vulnerabilities and your storage and bandwidth usage. 
+- Monitor usage in an organization in your Cloudsmith account. 
 
 
 ## Setup

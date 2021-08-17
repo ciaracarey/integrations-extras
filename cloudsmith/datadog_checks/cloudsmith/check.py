@@ -15,8 +15,8 @@ CRITICAL_QUOTA = 85
 
 
 class CloudsmithCheck(AgentCheck):
-    def __init__(self, name, init_config, instance):
-        super(CloudsmithCheck, self).__init__(name, init_config, instance)
+    def __init__(self, name, init_config, instances):
+        super(CloudsmithCheck, self).__init__(name, init_config, instances)
 
         self.base_url = self.instance.get('url')
         self.api_key = self.instance.get('cloudsmith_api_key')
@@ -111,7 +111,7 @@ class CloudsmithCheck(AgentCheck):
         total_vulnerabilities = 0
 
         for package in response_json:
-            if 'has_vulnerabilities' in package:
+            if 'has_vulnerabilities' in package & package['has_vulnerabilities'] == 'true':
                 total_vulnerabilities += package['num_vulnerabilities']
                 print("package['max_severity']: {}".format(package['max_severity']))
                 if package['max_severity'] in {'Critical', 'High'}:
